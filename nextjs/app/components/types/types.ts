@@ -1,4 +1,4 @@
-export type ParameterValue = string | string[];
+export type ParameterValue = string | string[] | number;
 
 export type ParameterKey = string;
 

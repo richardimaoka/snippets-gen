@@ -10,9 +10,34 @@
   padding-right: 8px;
 }
 
-.textarea {
-  width: 100%;
-  min-height: 148px;
-  resize: none;
-  box-sizing: border-box;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.button {
+  /* Cancel button's default styling */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  font-size: unset;
+
+  border: solid 1px grey;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  color: grey;
+}
+
+.select {
+  background: rgb(84, 84, 184);
+  border: solid 1px rgb(84, 84, 184);
+  color: white;
 }

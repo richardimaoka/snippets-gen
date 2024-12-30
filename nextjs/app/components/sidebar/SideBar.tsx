@@ -7,32 +7,23 @@ type Props = {
 };
 
 export function SideBar(props: Props) {
-  const key = "menuNames";
-
-  function split(v: string): string[] {
-    return v.split("\n");
-  }
-
-  function join(v: string | string[]): string {
-    if (typeof v === "string") {
-      return v;
-    } else {
-      return v.join("\n");
-    }
-  }
+  const key = "number";
+  const v = props.input[key];
+  const selections = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
     <div className={styles.component}>
-      <textarea
-        className={styles.textarea}
-        autoComplete={"on"}
-        onChange={(x) =>
-          props.dispatch({ key: key, newValue: split(x.target.value) })
-        }
-        value={join(props.input[key])}
-        wrap="off"
-      />
-      <input />
+      <div className={styles.buttons}>
+        {selections.map((n) => (
+          <button
+            key={n}
+            className={styles.button + (v === n ? " " + styles.select : "")}
+            onClick={() => props.dispatch({ key: key, newValue: n })}
+          >
+            {n}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
