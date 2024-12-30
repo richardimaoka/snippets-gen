@@ -1,11 +1,5 @@
-import { Config } from "./components/Config";
-import styles from "./page.module.css";
+import { SnippetPageServer } from "./components/SnippetPageServer";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <Config />
-      <div>main</div>
-    </div>
-  );
+  return <SnippetPageServer />;
 }
