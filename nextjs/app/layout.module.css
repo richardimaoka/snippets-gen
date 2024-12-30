@@ -1,0 +1,28 @@
+.component {
+  /* App-like layout, scroll is only within each component */
+  height: 100svh;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  background-color: turquoise;
+  height: 30px;
+}
+
+.middle {
+  background-color: rgb(83, 83, 83);
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.sidebar {
+  background-color: darkslategray;
+  width: 30px;
+}
+
+.footer {
+  background-color: rgb(8, 54, 50);
+  height: 30px;
+}
