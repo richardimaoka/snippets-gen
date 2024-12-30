@@ -1,13 +1,13 @@
 import styles from "./SideBar.module.css";
-import { Action, KV } from "../types/types";
+import { ParameterUpdate, Parameters } from "../types/types";
 
 type Props = {
-  state: KV;
-  dispatch: (action: Action) => void;
+  state: Parameters;
+  dispatch: (action: ParameterUpdate) => void;
 };
 
 export function SideBar(props: Props) {
-  const key = "itemName";
+  const key = "menuNames";
 
   return (
     <div className={styles.component}>

@@ -1,7 +1,7 @@
-import { KV } from "../types/types";
+import { Parameters } from "../types/types";
 import styles from "./MainSection.module.css";
 
-type Props = KV;
+type Props = Parameters;
 
 export function MainSection(props: Props) {
   return <div className={styles.component}>{props.name}</div>;

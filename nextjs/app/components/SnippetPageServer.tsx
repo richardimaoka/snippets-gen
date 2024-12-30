@@ -5,7 +5,7 @@ export function SnippetPageServer() {
   // fetch saved inputs
   // server-side state
 
-  const pageDefaults = { itemName: "this item name" };
+  const pageDefaults = { menuNames: "file\nedit\nselection\nview" };
 
   return <SnippetPageClient defaults={pageDefaults} />;
 }

@@ -1,8 +1,10 @@
-export type V = string | string[];
+export type ParameterValue = string | string[];
 
-export type KV = Record<string, V>;
+export type ParameterKey = string;
 
-export type Action = {
+export type Parameters = Record<ParameterKey, ParameterValue>;
+
+export type ParameterUpdate = {
   key: string;
-  newValue: V;
+  newValue: ParameterValue;
 };
