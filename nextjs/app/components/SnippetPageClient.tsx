@@ -18,13 +18,13 @@ function reducer(state: Parameters, action: ParameterUpdate) {
 }
 
 export function SnippetPageClient(props: Props) {
-  const [state, dispatch] = useReducer(reducer, props.defaults);
-  console.log("SnippetPageClient", state);
+  const [input, dispatch] = useReducer(reducer, props.defaults);
+  console.log("SnippetPageClient", input);
 
   return (
     <div className={styles.component}>
-      <SideBar state={state} dispatch={dispatch} />
-      <MainSection {...state} />
+      <SideBar input={input} dispatch={dispatch} />
+      <MainSection input={input} />
     </div>
   );
 }

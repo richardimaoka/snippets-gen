@@ -1,8 +1,18 @@
 import { Parameters } from "../types/types";
 import styles from "./MainSection.module.css";
 
-type Props = Parameters;
+type Props = {
+  input: Parameters;
+};
 
 export function MainSection(props: Props) {
-  return <div className={styles.component}>{props.name}</div>;
+  const input = props.input;
+  return (
+    <div className={styles.component}>
+      <div>{input.s}.module.css</div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
 }
