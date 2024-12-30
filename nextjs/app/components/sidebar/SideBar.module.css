@@ -9,3 +9,10 @@
   padding-left: 8px;
   padding-right: 8px;
 }
+
+.textarea {
+  width: 100%;
+  min-height: 148px;
+  resize: none;
+  box-sizing: border-box;
+}
