@@ -5,5 +5,5 @@ export function SnippetPageServer() {
   // fetch saved inputs
   // server-side state
 
-  return <SnippetPageClient name="snippet" />;
+  return <SnippetPageClient default={{ name: "main contents" }} />;
 }

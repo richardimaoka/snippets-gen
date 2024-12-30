@@ -1,20 +1,21 @@
 "use client";
 
-import { MainSection } from "./contents/MainSection";
+import { useState } from "react";
+import { MainSection, MainSectionProps } from "./contents/MainSection";
 import { SideBar } from "./sidebar/SideBar";
 import styles from "./SnippetPageClient.module.css";
 
 type Props = {
-  name: string;
+  default: MainSectionProps;
 };
 
 export function SnippetPageClient(props: Props) {
-  console.log(props);
+  const [pageState] = useState(props.default);
 
   return (
     <div className={styles.component}>
       <SideBar />
-      <MainSection />
+      <MainSection {...pageState} />
     </div>
   );
 }
