@@ -1,24 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { MainSection } from "./contents/MainSection";
 import { SideBar } from "./sidebar/SideBar";
 import styles from "./SnippetPageClient.module.css";
-import { KV } from "./types/types";
+import { Action, KV } from "./types/types";
 
 type Props = {
   defaults: KV;
 };
 
-export function SnippetPageClient(props: Props) {
-  const [pageState] = useState(props.defaults);
+function reducer(state: KV, action: Action) {
+  const newState = { ...state };
+  newState[action.key] = action.newValue;
 
-  props.defaults["a"] = "v";
+  return newState;
+}
+
+export function SnippetPageClient(props: Props) {
+  const [state, dispatch] = useReducer(reducer, props.defaults);
 
   return (
     <div className={styles.component}>
-      <SideBar state={pageState} />
-      <MainSection {...pageState} />
+      <SideBar state={state} dispatch={dispatch} />
+      <MainSection {...state} />
     </div>
   );
 }
