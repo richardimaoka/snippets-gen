@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Config />
+      <div>main</div>
     </div>
   );
 }
