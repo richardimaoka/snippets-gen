@@ -5,5 +5,7 @@ export function SnippetPageServer() {
   // fetch saved inputs
   // server-side state
 
-  return <SnippetPageClient default={{ name: "main contents" }} />;
+  const pageDefaults = { name: "main contents" };
+
+  return <SnippetPageClient defaults={pageDefaults} />;
 }
