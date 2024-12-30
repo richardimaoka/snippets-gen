@@ -12,7 +12,6 @@
 }
 
 .middle {
-  background-color: rgb(83, 83, 83);
   display: grid;
   grid-template-columns: auto 1fr;
 }

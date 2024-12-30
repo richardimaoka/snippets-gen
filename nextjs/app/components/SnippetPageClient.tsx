@@ -1,5 +1,7 @@
 "use client";
 
+import { MainSection } from "./contents/MainSection";
+import { SideBar } from "./sidebar/SideBar";
 import styles from "./SnippetPageClient.module.css";
 
 type Props = {
@@ -11,8 +13,8 @@ export function SnippetPageClient(props: Props) {
 
   return (
     <div className={styles.component}>
-      <div>config bar</div>
-      <div>snippet results</div>
+      <SideBar />
+      <MainSection />
     </div>
   );
 }
